@@ -44,4 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir $(SolutionDir)..\publish
+xcopy /Y $(TargetPath)  $(SolutionDir)..\publish\$(TargetFileName)
+xcopy /Y $(TargetDir)$(TargetName).pdb $(SolutionDir)..\publish\$(TargetName).pdb</PostBuildEvent>
+  </PropertyGroup>
 </Project>

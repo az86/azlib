@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+*.pdb
+/src/AZDotNet.Basic/bin/Debug
+/src/AZDotNet.Basic/obj/Debug
+/src/.vs/az/v15
